@@ -78,9 +78,9 @@ function Index() {
   return (
     <main id="home" className="bg-background">
       <header className="sticky top-0 z-50 border-b border-border/70 bg-background/95 backdrop-blur-xl">
-        <div className="section-shell grid min-h-20 grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
+        <div className="section-shell grid min-h-20 grid-cols-[minmax(0,1fr)_auto] items-center gap-3 lg:grid-cols-[auto_minmax(0,1fr)] xl:grid-cols-[auto_minmax(0,1fr)_auto]">
           <Logo />
-          <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary navigation">
+          <nav className="hidden min-w-0 items-center justify-center gap-7 lg:flex" aria-label="Primary navigation">
             {navItems.map((item) => (
               <a key={item} href={`#${item.toLowerCase().replace(" ", "-")}`} className="text-sm font-medium text-foreground transition hover:text-secondary">{item}</a>
             ))}
